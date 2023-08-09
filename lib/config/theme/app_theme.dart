@@ -18,15 +18,13 @@ class AppTheme {
   final int selectedColor;
 
   AppTheme({this.selectedColor = 0})
-      : assert(
-        selectedColor >= 0 && selectedColor < _colorThemes.length,
-        "Colors must be between 0 asn ${_colorThemes.length}");
+      : assert(selectedColor >= 0 && selectedColor < _colorThemes.length,
+            "Colors must be between 0 asn ${_colorThemes.length}");
 
   ThemeData theme() {
     return ThemeData(
-      useMaterial3: true, 
-      colorSchemeSeed: _colorThemes[selectedColor], 
-      brightness: Brightness.light
-    );
+        useMaterial3: true,
+        colorSchemeSeed: _colorThemes[selectedColor],
+        brightness: Brightness.light);
   }
 }
